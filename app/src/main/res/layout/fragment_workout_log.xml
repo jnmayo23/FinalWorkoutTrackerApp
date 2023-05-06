@@ -1,72 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:id="@+id/parent_layout"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/workout_rv"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_height="650dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@android:color/transparent"/>
 
-        <EditText
-            android:id="@+id/dateView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter Date" />
-
-        <EditText
-            android:id="@+id/nameView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter workout name" />
-
-        <EditText
-            android:id="@+id/typeView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter the workout type" />
-        <EditText
-            android:id="@+id/durationView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter the duration" />
-        <EditText
-            android:id="@+id/descView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter the Description" />
-        <Button
-            android:id="@+id/addWorkout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="AddWorkout" />
-
-        <TextView
-            android:id="@+id/testView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="eee"
-            />
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/displayWorkout"
-        android:layout_width="match_parent"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Display Workout" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/add_icon" />
 
-    <LinearLayout
-        android:id="@+id/WorkoutLog"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-    </LinearLayout>
-
-
-</LinearLayout>
+</RelativeLayout>

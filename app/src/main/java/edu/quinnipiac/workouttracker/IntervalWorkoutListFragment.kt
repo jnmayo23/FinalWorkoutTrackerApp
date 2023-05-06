@@ -1,6 +1,4 @@
 package edu.quinnipiac.workouttracker
-//import kotlinx.android.synthetic.main.fragment_interval_workout_list.name
-//import kotlinx.android.synthetic.main.fragment_interval_workout_list.sets
 
 import android.os.Bundle
 import android.util.Log

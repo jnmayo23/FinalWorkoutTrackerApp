@@ -37,8 +37,6 @@
         <argument
             android:name="item_id"
             app:argType="integer" />
-        <action android:id="@+id/action_createNewIntervalWorkoutFragment_to_intervalWorkoutListFragment"
-            app:destination="@id/intervalWorkoutListFragment" />
    </fragment>
 
     <fragment
@@ -55,7 +53,32 @@
         android:id="@+id/workoutLogFragment"
         android:name="edu.quinnipiac.workouttracker.WorkoutLogFragment"
         android:label="Workout Log"
-        tools:layout="@layout/fragment_workout_log" />
+        tools:layout="@layout/fragment_workout_log">
+        <action android:id="@+id/action_workoutLogFragment_to_createNewWorkoutFragment"
+            app:destination="@id/createNewWorkoutFragment" />
+        <action android:id="@+id/action_workoutLogFragment_to_workoutDetailsFragment"
+            app:destination="@id/workoutDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createNewWorkoutFragment"
+        android:name="edu.quinnipiac.workouttracker.CreateNewWorkoutFragment"
+        android:label="Create New Workout"
+        tools:layout="@layout/fragment_create_new_workout">
+        <argument
+            android:name="item_id"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/workoutDetailsFragment"
+        android:name="edu.quinnipiac.workouttracker.WorkoutDetailsFragment"
+        android:label="Workout Details"
+        tools:layout="@layout/fragment_workout_details">
+        <argument
+            android:name="item_id"
+            app:argType="integer" />
+    </fragment>
 
     <fragment
         android:id="@+id/settingsFragment"

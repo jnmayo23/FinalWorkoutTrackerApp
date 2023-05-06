@@ -9,22 +9,22 @@ import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
 
 
-@Database(entities = [IntervalWorkout::class] , version = 1)
-abstract class IntervalWorkoutDatabase : RoomDatabase() {
+@Database(entities = [Workout::class] , version = 1)
+abstract class WorkoutDatabase : RoomDatabase() {
 
-    abstract fun getIntervalWorkoutDao() : IntervalWorkoutDao
+    abstract fun getWorkoutDao() : WorkoutDao
 
     companion object{
-        private const val DB_NAME = "Interval-Workout-Database.db"
+        private const val DB_NAME = "Workout-Database.db"
 
         @Volatile
-        private var instance : IntervalWorkoutDatabase? = null
+        private var instance : WorkoutDatabase? = null
 
-        fun getDatabase(context: Context) : IntervalWorkoutDatabase{
+        fun getDatabase(context: Context) : WorkoutDatabase{
             return instance ?: synchronized( this){
                 var instance = Room.databaseBuilder(
                     context.applicationContext.applicationContext,
-                    IntervalWorkoutDatabase::class.java,
+                    WorkoutDatabase::class.java,
                     DB_NAME
                 )
                     .fallbackToDestructiveMigration()
@@ -45,10 +45,10 @@ abstract class IntervalWorkoutDatabase : RoomDatabase() {
     }
 
     // we are creating an async task class to perform task in background.
-    private class PopulateDbAsyncTask internal constructor(instance: IntervalWorkoutDatabase?) :
+    private class PopulateDbAsyncTask internal constructor(instance: WorkoutDatabase?) :
         AsyncTask<Void?, Void?, Void?>() {
         init {
-            val intervalWorkoutDao: IntervalWorkoutDao? = instance?.getIntervalWorkoutDao()
+            val workoutDao: WorkoutDao? = instance?.getWorkoutDao()
         }
 
 //        protected fun doInBackground(vararg voids: Void): Void? {

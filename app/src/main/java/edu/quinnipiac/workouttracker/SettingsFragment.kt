@@ -5,31 +5,32 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.fragment.app.Fragment
+import edu.quinnipiac.workouttracker.databinding.FragmentSettingsBinding
 
 class SettingsFragment : Fragment() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.fragment_color, container, false)
-        val redButton = view.findViewById<Button>(R.id.red)
-        val greenButton = view.findViewById<Button>(R.id.green)
-        val blueButton = view.findViewById<Button>(R.id.blue)
+    private lateinit var binding: FragmentSettingsBinding
 
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
+        binding = FragmentSettingsBinding.inflate(inflater, container, false)
+        val view = binding.root
 
-        redButton.setOnClickListener { changeBackgroundColor(Color.RED) }
-        greenButton.setOnClickListener { changeBackgroundColor(Color.GREEN) }
-        blueButton.setOnClickListener { changeBackgroundColor(Color.BLUE) }
+        binding.red.setOnClickListener {
+            (activity as MainActivity).changeBackgroundColor(Color.rgb(189,46,50))
+        }
+        binding.green.setOnClickListener {
+            (activity as MainActivity).changeBackgroundColor(Color.rgb(70,142,89))
+        }
+        binding.blue.setOnClickListener {
+            (activity as MainActivity).changeBackgroundColor(Color.rgb(37,124,202))
+        }
+        binding.white.setOnClickListener {
+            (activity as MainActivity).changeBackgroundColor(Color.rgb(255,255,255))
+        }
 
         return view
     }
 
-    private fun changeBackgroundColor(color: Int) {
-        activity?.window?.decorView?.setBackgroundColor(color)
-    }
 }

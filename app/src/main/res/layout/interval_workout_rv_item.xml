@@ -3,16 +3,17 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="5dp"
-    android:elevation="8dp"
-    app:cardCornerRadius="8dp">
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:id="@+id/intervalWorkoutItem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp">
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@color/light_gray"
+        android:elevation="8dp"
+        app:cardCornerRadius="8dp">
 
         <TextView
             android:id="@+id/item_name"
@@ -25,7 +26,7 @@
 
         <TextView
             android:id="@+id/item_sets_label"
-            android:layout_width="300dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/item_name"
             android:layout_alignParentLeft="true"
@@ -35,11 +36,12 @@
             android:textSize="15sp" />
         <TextView
             android:id="@+id/item_sets"
-            android:layout_width="300dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/item_name"
             android:layout_alignParentRight="true"
             android:layout_toRightOf="@id/item_sets_label"
+            android:gravity="right"
             android:padding="3dp"
             android:text="sets"
             android:textColor="@color/black"
@@ -47,7 +49,7 @@
 
         <TextView
             android:id="@+id/item_warm_up_time_label"
-            android:layout_width="300dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/item_sets_label"
             android:layout_alignParentLeft="true"
@@ -58,11 +60,12 @@
 
         <TextView
             android:id="@+id/item_warm_up_time"
-            android:layout_width="300dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/item_sets"
             android:layout_alignParentRight="true"
             android:layout_toRightOf="@id/item_warm_up_time_label"
+            android:gravity="right"
             android:padding="3dp"
             android:text="time"
             android:textColor="@color/black"
@@ -70,7 +73,7 @@
 
         <TextView
             android:id="@+id/item_high_intensity_time_label"
-            android:layout_width="300dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/item_warm_up_time_label"
             android:layout_alignParentLeft="true"
@@ -81,11 +84,12 @@
 
         <TextView
             android:id="@+id/item_high_intensity_time"
-            android:layout_width="300dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/item_warm_up_time"
             android:layout_alignParentRight="true"
             android:layout_toRightOf="@id/item_high_intensity_time_label"
+            android:gravity="right"
             android:padding="3dp"
             android:text="time"
             android:textColor="@color/black"
@@ -93,7 +97,7 @@
 
         <TextView
             android:id="@+id/item_low_intensity_time_label"
-            android:layout_width="300dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/item_high_intensity_time_label"
             android:layout_alignParentLeft="true"
@@ -104,11 +108,12 @@
 
         <TextView
             android:id="@+id/item_low_intensity_time"
-            android:layout_width="300dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/item_high_intensity_time"
             android:layout_alignParentRight="true"
             android:layout_toRightOf="@id/item_low_intensity_time_label"
+            android:gravity="right"
             android:padding="3dp"
             android:text="time"
             android:textColor="@color/black"
@@ -116,7 +121,7 @@
 
         <TextView
             android:id="@+id/item_cool_down_time_label"
-            android:layout_width="300dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/item_low_intensity_time_label"
             android:layout_alignParentLeft="true"
@@ -127,11 +132,12 @@
 
         <TextView
             android:id="@+id/item_cool_down_time"
-            android:layout_width="300dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/item_low_intensity_time"
             android:layout_alignParentRight="true"
             android:layout_toRightOf="@id/item_cool_down_time_label"
+            android:gravity="right"
             android:padding="3dp"
             android:text="time"
             android:textColor="@color/black"

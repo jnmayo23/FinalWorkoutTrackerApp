@@ -69,11 +69,16 @@ class CreateNewIntervalWorkoutFragment : Fragment() {
                 binding.newLowIntensityTime.text.toString(),
                 binding.newCoolDownTime.text.toString()
             )
+            binding.newName.setText("")
+            binding.newSets.setText("")
+            binding.newWarmUpTime.setText("")
+            binding.newHighIntensityTime.setText("")
+            binding.newLowIntensityTime.setText("")
+            binding.newCoolDownTime.setText("")
+            Toast.makeText(requireActivity(), "Interval workout has been saved to Room Database.", Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(requireActivity(), "Interval workout could not be saved. Please enter values in all fields.", Toast.LENGTH_SHORT).show()
         }
-//        val action = CreateNewIntervalWorkoutFragmentDirections.actionAddItemFragmentToItemListFragment()
-//        findNavController().navigate(action_createNewIntervalWorkoutFragment_to_intervalWorkoutListFragment)
-
-        Toast.makeText(requireActivity(), "Course has been saved to Room Database. ", Toast.LENGTH_SHORT).show()
     }
 
 }

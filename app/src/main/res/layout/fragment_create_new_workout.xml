@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CreateNewWorkoutFragment">
+
+    <EditText
+        android:id="@+id/newDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Enter Workout Date (mm-dd-yyyy)" />
+
+    <EditText
+        android:id="@+id/newName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Enter Workout Name" />
+
+    <EditText
+        android:id="@+id/newType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Enter Workout Type" />
+
+    <EditText
+        android:id="@+id/newDuration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Enter Duration" />
+
+    <EditText
+        android:id="@+id/newDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Enter Description" />
+
+    <Button
+        android:id="@+id/addWorkoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Add Workout"
+        android:textAllCaps="false" />
+
+</LinearLayout>
