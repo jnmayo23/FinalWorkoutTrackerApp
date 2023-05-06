@@ -17,7 +17,7 @@ import androidx.navigation.fragment.navArgs
 import edu.quinnipiac.workouttracker.databinding.FragmentIntervalTimerBinding
 import edu.quinnipiac.workouttracker.databinding.FragmentWorkoutDetailsBinding
 
-
+// Fragment has all the logic for interval timer
 class IntervalTimerFragment : Fragment() {
 
     private val navigationArgs: WorkoutDetailsFragmentArgs by navArgs()
@@ -73,6 +73,7 @@ class IntervalTimerFragment : Fragment() {
 
         binding.saveButton.setEnabled(false)
 
+        // Starts interval timer
         binding.startButton.setOnClickListener {
             if (state == WARM_UP && !isRunning || state == COMPLETE && !isRunning) {
                 startWarmUpTimer(warmUpTime.toLong())
@@ -84,11 +85,9 @@ class IntervalTimerFragment : Fragment() {
                 startCoolDownTimer(coolDownTime.toLong())
             }
             isRunning = true
-//            binding.startButton.setEnabled(false);
-//            binding.stopButton.setEnabled(true);
         }
 
-        // The reset button sets the offset and stopwatch to 0
+        // Resets interval timer to beginning
         binding.resetButton.setOnClickListener {
             isRunning = false
             bind(intervalWorkout)

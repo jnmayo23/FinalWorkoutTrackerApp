@@ -9,10 +9,9 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.fragment.findNavController
 import edu.quinnipiac.workouttracker.databinding.FragmentCreateNewIntervalWorkoutBinding
 
-
+// Fragment that allows users to input values to create a new interval workout
 class CreateNewIntervalWorkoutFragment : Fragment() {
 
     private val viewModel: IntervalWorkoutViewModel by activityViewModels {

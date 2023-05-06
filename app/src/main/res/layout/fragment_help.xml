@@ -2,28 +2,46 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    android:gravity="top"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/red"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/textview7"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/black"
-        android:text="Red" />
+        android:gravity="center"
+        android:textSize="25dp"
+        android:text="Help Section"/>
 
-    <Button
-        android:id="@+id/green"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/textview5"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/black"
-        android:text="Green" />
+        android:textSize="19dp"
+        android:text="Welcome to the help section Listed below are some of the most frequently asked questions:"/>
 
-    <Button
-        android:id="@+id/blue"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/textview1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/black"
-        android:text="Blue" />
+        android:text="1) Change theme of app: Go to settings"/>
+
+    <TextView
+        android:id="@+id/textview2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2) Saved a workout: Go to workout Log and create a workout to be saved"/>
+
+    <TextView
+        android:id="@+id/textview3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3) Use interval timer: Go to the interval section and create an interval workout"/>
+
+    <TextView
+        android:id="@+id/textview4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="4) Are your interval workouts saved after closing the app: Yes they are and are displayed in the interval section"/>
 
 </LinearLayout>
